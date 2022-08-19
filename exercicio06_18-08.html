@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+<body>
+<!--
+    6. Um estudante recebeu o Bilhete Único de estudante pela primeira vez e deseja saber quanto vai economizar por mês. O valor para estudante é metade do valor da passagem. Crie um programa que:
+a) Pergunte a ele o valor da passagem
+b) Pergunte a ele quantas viagens fará por mês
+c) Ao clicar num botão "Ver economia", deve ver um alerta com uma frase como esta: "Você economizará R$X por mês"
+-->
+
+<center><h2>Calculadora Bilhete de Estudante</h2></center>
+Quanto é a passagem aonde você mora? <input type="text" id="in_passagem"><br><br>
+Quantas passagens você gasta por mês? <input type="text" id="in_viagens"><br><br>
+<button onclick="calc_economia()">Ver economia</button>
+</body>
+</html>
+
+<script>
+    function calc_economia(){
+        alert(`Você economizará R$${(Number(in_viagens.value) * Number(in_passagem.value)) / 2} por mês.`)
+        in_passagem.value = ''
+        in_viagens.value = ''
+    }
+</script>

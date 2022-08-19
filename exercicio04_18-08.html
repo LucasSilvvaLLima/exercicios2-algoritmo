@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+    <!--4. Crie um programa que:
+a) Solicite a idade do usuário
+b) Deve haver 2 botões abaixo: "Aposentadoria Homem" e "Aposentadoria Mulher"
+c) No primeiro botão, calcule e exiba um alert com o tempo que falta para se aposentar, se homem.
+     Considere que um homem se aposenta com 70 anos
+d) No segundo botão, calcule e exiba um alert com o tempo que falta para se aposentar, se mulher. 
+Considere que um mulher se aposenta com 60 anos
+    -->
+<center><h2>Aposentadoria Homem/Mulher</h2></center>
+<br><br>
+
+Digite a sua Idade: <input type="text" id="in_idade">
+<br><br>
+
+<button onclick="homem()">Aposentadoria Homem</button>
+<button onclick="mulher()">Aposentadoria Mulher</button>
+
+<br><br>
+
+</body>
+</html>
+<script>
+    function homem(){
+        alert(`Faltam ${70 - Number(in_idade.value )} para você Homem se aposentar.`)
+    }
+
+    function mulher(){
+        alert(`Faltam ${60 - Number(in_idade.value )} para você Mulher se aposentar.`)
+    }
+</script>

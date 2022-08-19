@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    
+    <h2>Meu Diario Pessoal:</h2>
+
+    No que você esta pensando? <input type="text" name="" id="in_diario">
+    <button onclick="registrar()">Registrar Memória</button>
+    <button onclick="limpar()">Limpar</button>
+    <br><br>
+    <div id="div_meu_diario">
+    </div>
+
+</body>
+</html>
+
+<script>
+    function registrar(){
+        div_meu_diario.innerHTML += `Pensamento do Dia <br>${in_diario.value}<br><br>`
+        in_diario.value = ''
+    }
+    function limpar(){
+        div_meu_diario.innerHTML = ''
+        in_diario.value = ''
+    }
+</script>

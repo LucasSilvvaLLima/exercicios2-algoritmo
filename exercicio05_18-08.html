@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <!--
+        5. Refaça a questão anterior, melhorando-a de tal forma que, ao invés de mostrar 2 alertas, exiba o seguinte texto ao final:
+            Se for homem faltam X anos p/ aposentar
+            Se for mulher faltam Y anos p/ aposentar
+    -->
+
+    <center><h2>Aposentadoria Homem/Mulher 1.2</h2></center>
+<br><br>
+
+Digite a sua Idade: <input type="text" id="in_idade">
+<br><br>
+
+<button onclick="aposentadoria()">Aposentadoria</button>
+
+<br><br>
+
+<div id="div_aposentadoria"></div>
+
+</body>
+</html>
+
+<script>
+    function aposentadoria(){
+        div_aposentadoria.innerHTML = `Se for homem faltam ${70 - Number(in_idade.value)} anos p/ aposentar <br> Se for mulher faltam ${60 - Number(in_idade.value)} anos p/ aposentar`
+        in_idade.value = ''
+    }
+
+</script>

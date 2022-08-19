@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        9. Crie um programa que:
+a) Solicite 2 números ao usuário
+b) tenha um botão para cada operação aritmética. Ao clicar em algum deles, exibir ABAIXO do botão UMA dessas frases:
+
+   A soma entre X e Y é Z
+   A diferença entre X e Y é Z
+   O produto entre X e Y é Z
+   A razão entre X e Y é Z         
+    -->
+    <center><h2>Calculadora</h2></center>
+    1° número: <input type="text" id="in_num1"><br><br>
+    2° número: <input type="text" id="in_num2"><br><br>
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Divisao</button>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subitrair()">Subitração</button>
+    <button onclick="limpar()">Limpar</button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function multiplicar(){
+        div_resultado.innerHTML = `A multiplicação entre ${Number(in_num1.value)} e ${Number(in_num2.value)} é ${Number(in_num1.value) * Number(in_num2.value)}`
+    }
+    
+    function dividir(){
+        div_resultado.innerHTML = `A divisão entre ${Number(in_num1.value)} e ${Number(in_num2.value)} é ${Number(in_num1.value) / Number(in_num2.value)}`
+    }
+    function somar(){
+        div_resultado.innerHTML = `A soma entre ${Number(in_num1.value)} e ${Number(in_num2.value)} é ${Number(in_num1.value) + Number(in_num2.value)}`
+    }
+    function subitrair(){
+        div_resultado.innerHTML = `A subtração entre ${Number(in_num1.value)} e ${Number(in_num2.value)} é ${Number(in_num1.value) - Number(in_num2.value)}`
+    }
+    function limpar(){
+        div_resultado.innerHTML = ''
+        in_num1.value = ''
+        in_num2.value = ''
+    }
+
+</script>

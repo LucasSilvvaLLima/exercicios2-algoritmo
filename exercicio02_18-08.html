@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+</head>
+<body>
+    
+<!--
+a) Solicite o sabor de uma pizza
+b) Solicite o preço da pizza
+c) Solicite a quantidade de amigos que vai rachar a conta
+d) Ao clicar em "Pedir Pizza", exiba abaixo do botão um texto como este: 
+    "A pizza de X custa R$Y e cada amigo vai pagar R$Z"
+
+-->
+
+<h2>Pizzaria SPTECH</h2>
+
+Insira o Sabor da Pizza: <input type="text" id="in_sabor"><br><br>
+Insira o Valor da Pizza: <input type="text" id="in_valor"><br><br>
+Insira a Quantidade de amigos que vão Pagar: <input type="text" id="in_amigos"><br><br>
+<button onclick="calcular()">Pedir Pizza</button>
+<div id="div_nota">
+
+</div>
+
+</body>
+</html>
+
+<script>
+    function calcular(){
+        div_nota.innerHTML = `A pizza de ${in_sabor.value} custa R$${in_valor.value} e cada amigo vai pagar R$${Number(in_valor.value) / Number(in_amigos.value)}`
+        in_sabor.value = ''
+        in_valor.value = ''
+        in_amigos.value = ''
+    }
+</script>
+
