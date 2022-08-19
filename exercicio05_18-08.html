@@ -14,23 +14,38 @@
     -->
 
     <center><h2>Aposentadoria Homem/Mulher 1.2</h2></center>
-<br><br>
+    <center>
+        <br><br>
 
-Digite a sua Idade: <input type="text" id="in_idade">
-<br><br>
+        Digite a sua Idade: <input type="text" id="in_idade">
+        <br><br>
 
-<button onclick="aposentadoria()">Aposentadoria</button>
+        <button onclick="aposentadoria()">Aposentadoria</button>
 
-<br><br>
+        <br><br>
 
-<div id="div_aposentadoria"></div>
+        <div id="div_aposentadoria"></div>
+    </center>
 
 </body>
 </html>
 
 <script>
     function aposentadoria(){
-        div_aposentadoria.innerHTML = `Se for homem faltam ${70 - Number(in_idade.value)} anos p/ aposentar <br> Se for mulher faltam ${60 - Number(in_idade.value)} anos p/ aposentar`
+        var idade = Number(in_idade.value)
+        div_aposentadoria.innerHTML = ''
+        if (idade >= 70) {
+            div_aposentadoria.innerHTML += `Você Homem com ${idade} anos já pode se aposentar <br>`            
+        } else{
+            div_aposentadoria.innerHTML += `Se for homem faltam ${70 - idade} anos p/ aposentar <br>`
+        }
+        
+        if(idade >= 60) {
+            div_aposentadoria.innerHTML += `Você Mulher com ${idade} anos já pode se aposentar <br>`   
+        } else{
+            div_aposentadoria.innerHTML += `Se for mulher faltam ${60 - idade} anos p/ aposentar <br>`
+        }
+
         in_idade.value = ''
     }
 

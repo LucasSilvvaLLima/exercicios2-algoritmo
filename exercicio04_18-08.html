@@ -16,24 +16,35 @@ d) No segundo botão, calcule e exiba um alert com o tempo que falta para se apo
 Considere que um mulher se aposenta com 60 anos
     -->
 <center><h2>Aposentadoria Homem/Mulher</h2></center>
-<br><br>
+<br>
 
-Digite a sua Idade: <input type="text" id="in_idade">
-<br><br>
+<center>
+    Digite a sua Idade: <input type="text" id="in_idade">
+    <br><br>
 
-<button onclick="homem()">Aposentadoria Homem</button>
-<button onclick="mulher()">Aposentadoria Mulher</button>
-
+    <button onclick="homem()">Aposentadoria Homem</button>
+    <button onclick="mulher()">Aposentadoria Mulher</button>
+</center>
 <br><br>
 
 </body>
 </html>
 <script>
     function homem(){
-        alert(`Faltam ${70 - Number(in_idade.value )} para você Homem se aposentar.`)
+        var idade = in_idade.value 
+        if (Number(idade >= 70)) {
+            alert(`Você Homem com ${Number(idade)} anos já pode dar entrada na aposentadoria.`)            
+        }else{
+            alert(`Faltam ${70 - Number(idade)} para você Homem se aposentar.`)
+        }
     }
 
     function mulher(){
-        alert(`Faltam ${60 - Number(in_idade.value )} para você Mulher se aposentar.`)
+        var idade = in_idade.value 
+        if (Number(idade >= 60)) {
+            alert(`Você Mulher com ${idade} anos já pode dar entrada na aposentadoria.`)            
+        }else{
+            alert(`Faltam ${60 - idade} para você Mulher se aposentar.`)
+        }
     }
 </script>

@@ -20,15 +20,20 @@
 
     <center><h2>DRAGON BALL Z</h2></center>
 
-    Qual é o seu nome guerreiro: <input type="text" id="in_nome"><br><br>
-    Qual o seu Ki: <input type="text" id="in_ki"><br>
-    <button onclick="calc_ki()">Ver Ki</button>
+    <center>
+        Qual é o seu nome guerreiro: <input type="text" id="in_nome"><br><br>
+        Qual o seu Ki: <input type="text" id="in_ki"><br>
+        <button onclick="calc_ki()">Ver Ki</button>
+    </center>
 </body>
 </html>
 
 <script>
     function calc_ki(){
-        alert(`O ki do ${in_nome.value} na forma Super Sayajin é ${Number(in_ki.value) * 50}`)
-        alert(`O ki do ${in_nome.value} na forma Super Sayajin 2 é ${Number(in_ki.value) * 100}`)
+        var ki_base = Number(in_ki.value)
+        var sayajin = ki_base * 50
+        var sayajin2 = ki_base * 100
+        alert(`O ki do ${in_nome.value} na forma Super Sayajin é ${sayajin}`)
+        alert(`O ki do ${in_nome.value} na forma Super Sayajin 2 é ${sayajin2}`)
     }
 </script>

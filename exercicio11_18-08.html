@@ -29,6 +29,7 @@ e) Exiba um alerta com uma frase assim: "A arrecadação foi de R$X"
 
 <script>
     function calcular(){
-        alert(`A arrecadação foi de R$${(Number(in_comuns.value) * Number(in_valor.value)) + ((Number(in_estudante.value) * Number(in_valor.value)) / 2)}`)
+        var arrecadacao = (Number(in_comuns.value) * Number(in_valor.value)) + ((Number(in_estudante.value) * Number(in_valor.value)) / 2)
+        alert(`A arrecadação foi de R$${arrecadacao}`)
     }
 </script>

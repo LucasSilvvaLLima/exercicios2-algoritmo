@@ -15,22 +15,26 @@ c) Ao clicar no botão "IMC Mulher", calcule e exiba seu IMC considerando que é
 Use a fórmula de IMC em https://centrodeobesidadeediabetes.org.br/tudo-sobre-obesidade/calculadora-de-imc/. E considere que o IMC da mulher é sempre 10% menor que o do homem.
     -->
     <center><h2>IMC</h2></center>
+    <center>
+        Insira o seu peso: <input type="text" id="in_peso"><br><br>
+        Insira a sua altura: <input type="text" id="in_altura"><br><br>
+        <button onclick="homem()">IMC Homem</button><br><br>
+        <button onclick="mulher()">IMC Mulher</button><br><br>
+    
+        <div id="div_imc"></div>
+    </center>
 
-    Insira o seu peso: <input type="text" id="in_peso"><br><br>
-    Insira a sua altura: <input type="text" id="in_altura"><br><br>
-    <button onclick="homem()">IMC Homem</button><br><br>
-    <button onclick="mulher()">IMC Mulher</button><br><br>
-
-    <div id="div_imc"></div>
 </body>
 </html>
 
 <script>
     function homem(){
-        div_imc.innerHTML = `IMC Homem: ${(Number(in_peso.value) / (Number(in_altura.value) * Number(in_altura.value)) )}`
+        var imc_Homem = (Number(in_peso.value) / (Number(in_altura.value) * Number(in_altura.value)))
+        div_imc.innerHTML = `IMC Homem: ${imc_Homem}`
     }
 
     function mulher(){
-        div_imc.innerHTML = `IMC Mulher: ${(( Number(in_peso.value) / (Number(in_altura.value) * Number(in_altura.value)) ) * 0.9)}`
+        var imc_Mulher = (( Number(in_peso.value) / (Number(in_altura.value) * Number(in_altura.value)) ) * 0.9)
+        div_imc.innerHTML = `IMC Mulher: ${imc_Mulher}`
     }
 </script>

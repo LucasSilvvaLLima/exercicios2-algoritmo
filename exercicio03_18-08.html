@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Média do Aluno</title>
 </head>
+<!--3. Crie um programa em HTML/JS que:
+a) Solicite 2 notas do aluno
+b) Ao clicar em "Ver média", exiba abaixo dele a frase "Sua média foi de X", onde X é a média aritmética entre as 2 notas-->
 <body>
-    <h2>Média do Aluno</h2>
+    <center><h2>Média do Aluno</h2></center>
 
-    Insira a 1°nota: <input type="text" id="in_nota1"><br><br>
-    Insira a 2°nota: <input type="text" id="in_nota2"><br><br>
-    <button onclick="media()">Ver Média</button>
+    <center>
+        Insira a 1°nota: <input type="text" id="in_nota1"><br><br>
+        Insira a 2°nota: <input type="text" id="in_nota2"><br><br>
+        <button onclick="media()">Ver Média</button>
 
-    <div id="div_media">
-
-    </div>
+        <div id="div_media"></div>
+    </center>
 </body>
 </html>
 
 <script>
     function media(){
-        div_media.innerHTML = `<br>Sua média foi ${(Number(in_nota1.value) + Number(in_nota2.value))/ 2}`
+        var mediaFinal = (Number(in_nota1.value) + Number(in_nota2.value))/ 2
+        div_media.innerHTML = `<br>Sua média foi ${mediaFinal}`
         in_nota1.value = ''
         in_nota2.value = ''
     }
